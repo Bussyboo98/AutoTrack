@@ -1,0 +1,26 @@
+License Plate,Car Make,Car Model,Car Color,Owner Name,Registration Status,State,Phone Number,Start Date,End Date,Tinted
+HR26DK8337,Toyota,Corolla,Red,John Doe,Registered,Lagos,08012345678,2023-01-01,2024-01-01,True
+
+XYZ456ABC,Honda,Civic,Blue,Jane Smith,Registered,Abuja,08098765432,2022-05-01,2023-05-01,False
+
+DEF789GHI,Ford,Focus,Black,Emily Davis,Not Registered,Kano,07011223344,2023-03-01,2024-03-01,True
+
+ABC123XYZ,Tesla,Model S,White,Mark Johnson,Registered,Lagos,08033445566,2023-06-01,2024-06-01,True
+
+JKL456MNO,BMW,3 Series,Silver,Anna Brown,Not Registered,Abuja,08055667788,2022-07-15,2023-07-15,False
+
+PQR789STU,Audi,A4,Black,Michael White,Registered,Kano,08077889900,2023-08-01,2024-08-01,True
+
+LMN123OPQ,Mercedes-Benz,C-Class,Gray,Laura Green,Registered,Lagos,08099988776,2022-09-10,2023-09-10,False
+
+VWX456YZA,Chevrolet,Malibu,Red,Peter Parker,Not Registered,Abuja,08066655544,2023-10-05,2024-10-05,True
+
+BCD789EFG,Nissan,Altima,Blue,Susan Clark,Registered,Kano,07022334455,2023-11-01,2024-11-01,False
+
+HIJ123KLM,Ford,Escape,Green,James Bond,Not Registered,Lagos,08088776655,2022-12-12,2023-12-12,True
+
+NOP456QRS,Toyota,Camry,Yellow,Emily Watson,Registered,Abuja,08033445566,2023-01-20,2024-01-20,False
+
+TUV789WXY,Honda,Accord,Brown,David Miller,Registered,Kano,08055667788,2023-02-25,2024-02-25,True
+
+ZAB123CDE,Hyundai,Elantra,White,Linda Evans,Not Registered,Lagos,07011223344,2023-03-15,2024-03-15,False
