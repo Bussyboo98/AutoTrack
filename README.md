@@ -1,8 +1,10 @@
 License Plate Detection System
+
 Description
 AutoTrack is an automated License Plate Recognition (LPR) system designed to detect, identify, and log vehicle information from images. Utilizing computer vision and machine learning techniques, AutoTrack extracts license plate numbers, detects vehicle colors, and matches the information against a database of registered vehicles. The system also sends email notifications with relevant data and maintains a MySQL database of vehicle details.
 
 Features
+
 License Plate Detection: Automatically detects and reads license plates from uploaded images using OpenCV and Tesseract OCR.
 Vehicle Color Detection: Identifies the dominant color of the vehicle using KMeans clustering.
 Database Management: Stores and retrieves vehicle information in a MySQL database.
