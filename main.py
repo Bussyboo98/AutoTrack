@@ -1,14 +1,11 @@
 import cv2
 import imutils
-import numpy as np
 import pytesseract
-from tkinter import *
 import tkinter as tk
 from PIL import Image, ImageTk   
 from tkinter.ttk import *
 import tkinter as tk
 from tkinter import filedialog
-from tkinter import *
 import numpy as np
 from PIL import Image, ImageTk
 from collections import Counter
@@ -184,9 +181,9 @@ def save_to_db(license_plate, owner, registration_status,  car_color_hex, car_ma
 def send_mail():
     r = askokcancel(title="Mail Excel", message="Do you want to mail the excel file to admin")
     if r:
-        sendermail = ""
-        recivermail = ""
-        password = ""
+        sendermail = "ogunburebusayo.j@gmail.com"
+        recivermail = "ogunburebusayo.j@gmail.com"
+        password = "jpkisglohidadtlc"
 
         try:
             message = MIMEMultipart()
@@ -333,7 +330,7 @@ def upload_image():
             car_color_rgb = ','.join(map(str, car_color))
             print("Detected car color (RGB):", car_color)
             print("Detected car color (Hex):", car_color_hex)
-
+            
             
               # Read CSV file and match the detected license plate
             vehicle_data = pd.read_csv('vehicle_data.csv')
@@ -394,6 +391,16 @@ def upload_image():
 
   
             detected_lp.config(text=f"License Plate: {cleaned_text}")
+            detected_owner.config(text=f"Owner:{owner}")
+            detected_registration.config(text=f"Registration Status:{registration_status}")
+            detected_color.configure(text=f"Car Color Hex:{car_color_hex}")
+            detected_make.configure(text=f"Car Make:{car_make}")
+            detected_model.configure(text=f"Car Model:{car_model}")
+            detected_state.configure(text=f"State:{state}")
+            detected_phone.configure(text=f"Phone:{phone_number}")
+            detected_tinted.configure(text=f"Tinted:{tinted}")
+            detected_start.configure(text=f"Start Date:{start_date}")
+            detected_end.configure(text=f"End Date:{end_date}")
            
 
             # Display the images
@@ -410,6 +417,13 @@ def upload_image():
 def display_about():
     about_text = """
     Automated License Plate Recognition System
+    
+    AutoTrack is an automated License Plate Recognition (LPR) system designed to detect, identify,
+    and log vehicle information from images. Utilizing computer vision and machine learning techniques, 
+    AutoTrack extracts license plate numbers, detects vehicle colors, and matches the information 
+    against a database of registered vehicles. The system also sends email notifications with relevant 
+    data and maintains a MySQL database of vehicle details.
+    
     Version: 1.0
     Developed by: Bussyboo
     """
@@ -419,12 +433,16 @@ def display_about():
 car_label = Label(image_tab)
 car_label.grid(row=0, column=0, padx=10, pady=10)
 
-upload = Button(image_tab, text="Upload an Image", command=upload_image, padx=10, pady=5)
-upload.grid(row=1, column=0, padx=10, pady=10)
 
 
 detected_lp = Label(details_tab, text="License Plate: ")
 detected_lp.grid(row=0, column=0, padx=10, pady=10)
+
+detected_owner = Label(details_tab, text="Owner: ")
+detected_owner.grid(row=0, column=0, padx=10, pady=10)
+
+detected_registration = Label(details_tab, text="Registration Status: ")
+detected_registration.grid(row=0, column=0, padx=10, pady=10)
 
 detected_color = Label(details_tab, text="Color: ")
 detected_color.grid(row=1, column=0, padx=10, pady=10)
@@ -435,10 +453,24 @@ detected_make.grid(row=2, column=0, padx=10, pady=10)
 detected_model = Label(details_tab, text="Model: ")
 detected_model.grid(row=3, column=0, padx=10, pady=10)
 
+detected_state = Label(details_tab, text="State: ")
+detected_state.grid(row=3, column=0, padx=10, pady=10)
+
+detected_phone = Label(details_tab, text="Phone: ")
+detected_phone.grid(row=3, column=0, padx=10, pady=10)
+
+detected_tinted = Label(details_tab, text="Tinted: ")
+detected_tinted.grid(row=3, column=0, padx=10, pady=10)
+
+detected_start = Label(details_tab, text="Start Date: ")
+detected_start.grid(row=3, column=0, padx=10, pady=10)
+
+detected_end = Label(details_tab, text="End Date: ")
+detected_end.grid(row=3, column=0, padx=10, pady=10)
+
 
 about_button = Button(about_tab, text="About", command=display_about, padx=10, pady=5)
 about_button.grid(row=0, column=0, padx=10, pady=10)
-
 
 classify_b = Button(root, text="Detect License Plate", command=upload_image, padx=10, pady=5)
 classify_b.pack(side=TOP, pady=10)
